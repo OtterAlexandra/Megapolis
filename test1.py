@@ -7,9 +7,9 @@ maxi = 0
 with open('monster_game.csv', encoding='utf-8') as f:
     reader = csv.reader(f, delimiter=',', quotechar='"')
     answer = list(reader)[1:]
-    result = []
+    result = []  № то, что запишем в новую таблицу
     for row in answer:
-        power = 0
+        power = 0  # мощность
         if row[1] == 'регенерация':
             power = int(row[-2]) * int(row[2])
             maxi = max(maxi, power)
